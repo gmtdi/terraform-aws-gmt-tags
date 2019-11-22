@@ -1,5 +1,11 @@
 locals {
-  environment = lower(var.environment)
+  environments = {
+    acc  = "acceptance"
+    dev  = "development"
+    prod = "production"
+  }
+
+  environment = lookup(local.environments, lower(var.environment), lower(var.environment))
   stack       = lower(var.stack)
 
   tags = {
