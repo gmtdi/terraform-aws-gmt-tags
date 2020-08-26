@@ -11,5 +11,6 @@ locals {
   tags = {
     Environment = local.environment
     Stack       = local.stack
+    env         = local.environment
   }
 }
