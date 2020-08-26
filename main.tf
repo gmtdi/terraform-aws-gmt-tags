@@ -3,6 +3,7 @@ locals {
     acc  = "acceptance"
     dev  = "development"
     prod = "production"
+    test = "test"
   }
 
   environment = lookup(local.environments, lower(var.environment), lower(var.environment))
