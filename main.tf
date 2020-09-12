@@ -10,8 +10,8 @@ locals {
   stack       = lower(var.stack)
 
   tags = {
+    Env         = local.environment
     Environment = local.environment
     Stack       = local.stack
-    env         = local.environment
   }
 }
