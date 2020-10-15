@@ -1,9 +1,10 @@
 locals {
   environments = {
-    acc  = "acceptance"
-    dev  = "development"
-    prod = "production"
-    test = "test"
+    acc      = "acceptance"
+    dev      = "development"
+    non-prod = "non-production"
+    prod     = "production"
+    test     = "test"
   }
 
   environment = lookup(local.environments, lower(var.environment), lower(var.environment))
